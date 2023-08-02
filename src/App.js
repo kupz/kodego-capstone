@@ -1,7 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  window.document.title = "M1 Tracker v2";
+  
   return (
     <div className="App">
       <header className="App-header">
