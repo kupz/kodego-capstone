@@ -1,0 +1,12 @@
+.logo {
+  border: 5px solid gray;
+  //   background-color: red;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: max-content;
+  div {
+    background-color: white;
+    transform: translateX(5%) translateY(24%);
+    font-weight: bolder;
+  }
+}
