@@ -2,8 +2,9 @@ import { useState } from "react";
 
 import "./styles/main.scss";
 import Login from "./pages/Login";
-import Signup from "./Signup";
+import Signup from "./pages/Signup";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/home";
 
 function App() {
   window.document.title = "M1 Tracker v2";
@@ -18,6 +19,11 @@ function App() {
     {
       path: "/signup",
       element: <Signup />,
+      errorElement: <h1>Error: 404. Page Not Found!.</h1>,
+    },
+    {
+      path: "/",
+      element: <Home />,
       errorElement: <h1>Error: 404. Page Not Found!.</h1>,
     },
   ]);
