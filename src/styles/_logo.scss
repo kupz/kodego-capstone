@@ -1,12 +1,4 @@
 .logo {
-  border: 5px solid gray;
-  //   background-color: red;
-  padding-top: 10px;
-  padding-left: 10px;
-  width: max-content;
-  div {
-    background-color: white;
-    transform: translateX(5%) translateY(24%);
-    font-weight: bolder;
-  }
+  width: 300px;
+  filter: drop-shadow(0 0 2px $color-green);
 }
