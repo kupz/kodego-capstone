@@ -1,16 +1,37 @@
 import { useState } from "react";
-import Logo from "./pages/global/Logo";
+
 import "./styles/main.scss";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/home";
 
 function App() {
   window.document.title = "M1 Tracker v2";
-  const [counter, setCounter] = useState(0);
+  // const [counter, setCounter] = useState(0);
+
+  const router = createBrowserRouter([
+    {
+      path: "/login",
+      element: <Login />,
+      errorElement: <h1>Error: 404. Page Not Found!.</h1>,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
+      errorElement: <h1>Error: 404. Page Not Found!.</h1>,
+    },
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: <h1>Error: 404. Page Not Found!.</h1>,
+    },
+  ]);
 
   return (
     <div className="App">
-      <Logo />
-      <Login />
+      {/* <Logo /> */}
+      <RouterProvider router={router} />
     </div>
   );
 }

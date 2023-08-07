@@ -1,10 +1,77 @@
 .login {
+  background-color: $color-white;
   display: flex;
-  flex-direction: column;
-  form {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  .login-form-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem;
+    margin-top: 5rem;
+    // border: 1px solid black;
+    h1 {
+      font-style: italic;
+    }
+    p {
+      color: $color-black-secondary;
+      font-size: large;
+      text-align: center;
+      font-weight: 500;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      width: 100%;
+      //   height: min-content;
+      //   border: 1px solid black;
+      input {
+        padding: 20px 15px;
+        width: 100%;
+        outline: 2px solid $color-green;
+        border: 0;
+        border-radius: 5px;
+      }
+      p {
+        color: $color-black-secondary;
+        font-weight: 500;
+      }
+      button {
+        padding: 20px 15px;
+        background-color: $color-green;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-weight: bolder;
+        font-size: large;
+      }
+    }
+    div {
+      a {
+        color: $color-green;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.login-left-section {
+  //   width: 600;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .login-left-section {
+    display: flex;
   }
 }
